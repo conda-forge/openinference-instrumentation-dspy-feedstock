@@ -22,8 +22,9 @@ requirements:
   run:
     - python >=3.9,<3.12
     - opentelemetry-api
-    - openinference-instrumentation >=0.1.5
+    - opentelemetry-instrumentation
     - opentelemetry-semantic-conventions
+    - openinference-instrumentation >=0.1.5
     - openinference-semantic-conventions
     - wrapt
     - typing-extensions

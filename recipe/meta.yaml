@@ -1,5 +1,5 @@
 {% set name = "openinference-instrumentation-dspy" %}
-{% set version = "0.1.8" %}
+{% set version = "0.1.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/openinference_instrumentation_dspy-{{ version }}.tar.gz
-  sha256: 2ea7b035fecbbdf0797b22c150cdae0bc347e964307087910d176d0dcb873e42
+  sha256: ed266246e7f97e6a328a6d8afe220e01d449f59daca09aadb23e45a99939cae5
 
 build:
   noarch: python
@@ -24,7 +24,7 @@ requirements:
     - opentelemetry-api
     - opentelemetry-instrumentation
     - opentelemetry-semantic-conventions
-    - openinference-instrumentation >=0.1.5
+    - openinference-instrumentation >=0.1.7
     - openinference-semantic-conventions
     - wrapt
     - typing-extensions

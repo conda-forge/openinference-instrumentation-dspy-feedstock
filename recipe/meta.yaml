@@ -1,5 +1,5 @@
 {% set name = "openinference-instrumentation-dspy" %}
-{% set version = "0.1.44" %}
+{% set version = "0.1.45" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/openinference_instrumentation_dspy-{{ version }}.tar.gz
-  sha256: 753c99b90cc9e1e0cd588be1c1aa4c8bfa951f7bed94abe2bd4a247f3cdd7568
+  sha256: 6bfe6ed981f9cf3017a80204fb1da2f7cb11fd2e3ec64ed5219fc106c0300053
 
 build:
   noarch: python

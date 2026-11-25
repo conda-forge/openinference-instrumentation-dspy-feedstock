@@ -1,0 +1,56 @@
+schema_version: 1
+
+context:
+  name: openinference-instrumentation-dspy
+  version: "0.1.45"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://files.pythonhosted.org/packages/source/${{ name[0] }}/${{ name }}/openinference_instrumentation_dspy-${{ version }}.tar.gz
+  sha256: 6bfe6ed981f9cf3017a80204fb1da2f7cb11fd2e3ec64ed5219fc106c0300053
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - hatchling
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - opentelemetry-api
+    - opentelemetry-instrumentation
+    - opentelemetry-semantic-conventions
+    - openinference-instrumentation >=0.1.12
+    - openinference-semantic-conventions >=0.1.9
+    - wrapt
+    - typing-extensions
+
+tests:
+  - python:
+      imports:
+        - openinference.instrumentation.dspy
+      pip_check: true
+      python_version:
+        - '*'
+        - ${{ python_min }}.*
+
+about:
+  summary: OpenInference DSPy Instrumentation
+  license: Apache-2.0
+  license_file: LICENSE
+  homepage: https://github.com/Arize-ai/openinference
+
+extra:
+  recipe-maintainers:
+    - michaelschiff
+    - mikeldking
+    - RogerHYang
+    - axiomofjoy
+    - anticorrelator

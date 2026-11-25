@@ -1,16 +1,16 @@
 schema_version: 1
 
 context:
-  name: openinference-instrumentation-dspy
-  version: "0.1.45"
+  version: "0.1.58"
+  build_number: "0"
 
 package:
-  name: ${{ name|lower }}
+  name: openinference-instrumentation-dspy
   version: ${{ version }}
 
 source:
-  url: https://files.pythonhosted.org/packages/source/${{ name[0] }}/${{ name }}/openinference_instrumentation_dspy-${{ version }}.tar.gz
-  sha256: 6bfe6ed981f9cf3017a80204fb1da2f7cb11fd2e3ec64ed5219fc106c0300053
+  url: https://files.pythonhosted.org/packages/source/o/openinference-instrumentation-dspy/openinference_instrumentation_dspy-${{ version }}.tar.gz
+  sha256: 7475c045574174d8241b27392fead5f81978709001c62f4581550eb9dc67cdaa
 
 build:
   number: 0
@@ -27,8 +27,8 @@ requirements:
     - opentelemetry-api
     - opentelemetry-instrumentation
     - opentelemetry-semantic-conventions
-    - openinference-instrumentation >=0.1.12
-    - openinference-semantic-conventions >=0.1.9
+    - openinference-instrumentation >=0.1.82
+    - openinference-semantic-conventions >=0.1.46
     - wrapt
     - typing-extensions
 
